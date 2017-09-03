@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GXN-Bt-Ymi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZoomImagePlayground" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMF-xj-PtJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q5z-gE-afM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <color key="backgroundColor" red="0.94509803920000002" green="0.94117647059999998" blue="0.28041294639999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Q5z-gE-afM" firstAttribute="centerY" secondItem="mMF-xj-PtJ" secondAttribute="centerY" id="0eC-6Y-5ts"/>
+                                    <constraint firstItem="Q5z-gE-afM" firstAttribute="leading" secondItem="mMF-xj-PtJ" secondAttribute="leading" id="1Nc-D7-WdG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q5z-gE-afM" secondAttribute="trailing" id="9aN-8o-2FQ"/>
+                                    <constraint firstItem="Q5z-gE-afM" firstAttribute="centerX" secondItem="mMF-xj-PtJ" secondAttribute="centerX" id="RPC-bK-pzI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Q5z-gE-afM" secondAttribute="bottom" id="atH-d2-KbD"/>
+                                    <constraint firstItem="Q5z-gE-afM" firstAttribute="top" secondItem="mMF-xj-PtJ" secondAttribute="top" id="uoC-pM-X6x"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mMF-xj-PtJ" secondAttribute="bottom" id="9PE-xY-zRA"/>
+                            <constraint firstItem="mMF-xj-PtJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="P2j-3g-jhq"/>
+                            <constraint firstItem="mMF-xj-PtJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xr5-1b-np0"/>
+                            <constraint firstAttribute="trailing" secondItem="mMF-xj-PtJ" secondAttribute="trailing" id="bhr-nN-Gup"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Q5z-gE-afM" id="KaZ-ww-Z3t"/>
+                        <outlet property="scrollView" destination="mMF-xj-PtJ" id="hJX-6d-W40"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Zoom View Controller-->
+        <scene sceneID="hza-CE-x0M">
+            <objects>
+                <viewController id="GXN-Bt-Ymi" customClass="ZoomViewController" customModule="ZoomImagePlayground" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qgg-Qy-BGs"/>
+                        <viewControllerLayoutGuide type="bottom" id="aFU-qH-Za0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wfc-cM-S9N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="FVQ-Sb-4iu">
+                                <rect key="frame" x="37" y="108" width="300" height="450"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FVQ-Sb-4iu" firstAttribute="centerY" secondItem="wfc-cM-S9N" secondAttribute="centerY" id="1YD-6I-qFR"/>
+                            <constraint firstItem="FVQ-Sb-4iu" firstAttribute="centerX" secondItem="wfc-cM-S9N" secondAttribute="centerX" id="ZnZ-8L-S0c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="FVQ-Sb-4iu" id="3m1-OU-7Ic"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KD1-yK-aIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="test" width="300" height="450"/>
+    </resources>
+</document>
